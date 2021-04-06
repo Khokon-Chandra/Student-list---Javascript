@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+
+body{
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(205, 231, 253);
+    overflow-y:auto;
+}
+
+.page{
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:20px auto;
+}
+header h1{
+    color:rgb(38, 37, 44);
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+header .search{
+    display: flex;
+}
+header .search button{
+    border: none;
+    color: #fff;
+    background: dodgerblue;
+    outline: none;
+    padding: 10px;
+}
+header .search input{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid dodgerblue;
+}
+
+.page .student-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    grid-gap: 2rem;
+}
+
+.page .student-list .list-item{
+    padding: 20px 14px;
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 8px;
+    box-shadow: 0 0 14px 0px rgb(65 65 65 / 10%);
+}
+
+.page .student-list .list-item::before{
+    position: absolute;
+    content: '';
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    background: rgba(100, 54, 250, 0.096);
+    overflow: hidden;
+}
+
+.student-list .name a{
+    font-size: 22px;
+    color:royalblue;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+.student-list .email{
+    color: rgb(87, 85, 85);
+    margin-bottom: 8px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.student-list .join-date{
+    color: rgb(87, 85, 85);
+    font-weight: 600;
+}
+.student-list hr{
+    border: none;
+    height: 1px;
+    margin-bottom: 8px;
+    background: rgb(202, 202, 202);
+}
+
+
+.page .student-list .avatar{
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+}
+
+.pagination{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.pagination .button{
+    padding: 10px;
+    border: none;
+    background: rgb(248, 251, 255);
+    color: rgb(31, 31, 31);
+    border-radius: 5px;
+    cursor: pointer;
+    outline: dodgerblue;
+    transition: 0.1s;
+}
+.pagination .button.active{
+    color: #fff;
+    background: dodgerblue;
+}
+
+@media(max-width:769px){
+
+    header{
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .search{
+        width: 100%;
+    }
+    header .search input{
+        width: 100%;
+    }
+
+}
